@@ -1,47 +1,29 @@
 <html>
-<head>
-    <title>C79</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
-</head>
-<body>
-<center>
-<h3 style="margin-top: 20px; margin-bottom: 20px; ">
-	List of the students in my class
-</h3>
+<title>Clicker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<div>
-<span>1</span>
-<input type="text" placeholder="Name of the Student" id="name_of_the_student_1">
-<br>
-
-<span>2</span>
-<input type="text" placeholder="Name of the Student" id="name_of_the_student_2">
-<br>
-
-<span>3</span>
-<input type="text" placeholder="Name of the Student" id="name_of_the_student_3">
-<br>
-
-<span>4</span>
-<input type="text" placeholder="Name of the Student" id="name_of_the_student_4">
-</div>
-
-<button onclick="submit()" id="submit_button">
-	Submit
-</button>
-
-<div id="display_name" style="font-weight: bold;">
-
-</div>
-
-<button onclick="sorting()" id="sort_button">
-	Sort
-</button>
-</center>
-
-<script>
-
-</script>
+<body onbeforeunload="return closingCode()">
+  <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  <div class='topbar'>
+    <a href='http://leemlam.github.io'>Clicker</a>
+  </div>
+    <center class='center'>
+      <h1 id='total'>Clicks: 0</h1>
+      <h5 id="click" style="font-family:trebuchet MS;">Clicks: 1 | Clicks per Second: 0</h5>
+      <img class="round" src="https://decostones.ie/wp-content/uploads/2015/11/click-hand.png" width="150" onclick='clicked()'></img>
+      <br><br>
+      <button id='upgrade' class="round" onclick='upgrade("upgrade")' style="font-family:courier;">0-Main Upgrade: 15</button>
+      <br><br>
+      <button id='cat' class="round" onclick='upgrade("clicker cat")' style="font-family:courier;">0-Clicker Cat: 25 | +1/sec</button>
+      <br><br>
+      <button id='worker' class="round" onclick='upgrade("worker")' style="font-family:courier;">0-Workers: 250 | +15/sec</button><br><br>
+      <button class="settings" onclick="save()">Save Click</button>
+      <button class="settings" onclick="load()">Load Click Info</button>
+      <button class="settings" onclick="reset()">Reset Clicks</button><br><br>
+    </center>
+  </link>
 </body>
+</meta>
+
 </html>
